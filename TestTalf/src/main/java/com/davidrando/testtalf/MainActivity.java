@@ -6,17 +6,21 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-    @Override
+    private static final int PICKFILE_RESULT_CODE = 1;
+
+    private String pathfichero;
+
+    public TextView titfich = (TextView) findViewById(R.id.tit_pregunta);
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
@@ -27,15 +31,28 @@ public class MainActivity extends Activity {
 
         Intent ficheroIntent = new Intent(Intent.ACTION_GET_CONTENT);
 
-        ficheroIntent.setType("gagt/sdf");
+        ficheroIntent.setType("file/*");
+
         try{
-            startActivityForResult(ficheroIntent,PICK_FILE_FOR_RESULT);
+            startActivityForResult(ficheroIntent,PICKFILE_RESULT_CODE);
         }
         catch(ActivityNotFoundException e){
             Log.e("tag", "No hay activities para atrapar la peticion de fichero");
         }
 
-        
+    }
+
+    protected void onActivityResult(int requestcode, int resultcode, Intent data){
+
+        switch(requestcode){
+            case PICKFILE_RESULT_CODE:
+                if (resultcode==RESULT_OK) {
+                    pathfichero = data.getData().getPath();
+                }
+            break;
+        }
+
+        titfich.setText(pathfichero);
 
     }
 
