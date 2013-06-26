@@ -15,7 +15,8 @@
             android:id="@id/b_selfile"
             android:layout_marginTop="73dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:onClick="sel_fichero"/>
 
     <TextView
             android:layout_width="wrap_content"
