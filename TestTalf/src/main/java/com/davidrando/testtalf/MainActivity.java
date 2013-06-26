@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -14,7 +15,7 @@ public class MainActivity extends Activity {
 
     private String pathfichero;
 
-    public TextView titfich = (TextView) findViewById(R.id.tit_pregunta);
+    public TextView titfich;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +28,7 @@ public class MainActivity extends Activity {
         return true;
     }
 
-    public void sel_fichero(){
+    public void sel_fichero(View v){
 
         Intent ficheroIntent = new Intent(Intent.ACTION_GET_CONTENT);
 
@@ -48,11 +49,13 @@ public class MainActivity extends Activity {
             case PICKFILE_RESULT_CODE:
                 if (resultcode==RESULT_OK) {
                     pathfichero = data.getData().getPath();
+                    titfich = (TextView) findViewById(R.id.tit_pregunta);
+                    titfich.setText(pathfichero);
                 }
             break;
         }
 
-        titfich.setText(pathfichero);
+
 
     }
 
