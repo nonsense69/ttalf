@@ -7,13 +7,22 @@ import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.StringTokenizer;
+
+import java.io.File;
+import java.util.StringTokenizer;
 
 public class MainActivity extends Activity {
 
     private static final int PICKFILE_RESULT_CODE = 1;
 
-    private String pathfichero;
+    private String pathfichero=null;
+    private File fichero;
+    private Bundle datos_examen;
 
     public TextView titfich;
 
@@ -38,10 +47,52 @@ public class MainActivity extends Activity {
             startActivityForResult(ficheroIntent,PICKFILE_RESULT_CODE);
         }
         catch(ActivityNotFoundException e){
-            Log.e("tag", "No hay activities para atrapar la peticion de fichero");
+            Log.e("errores", "No hay activities para atrapar la peticion de fichero");
+        }
+    }
+
+    public void selNumPreg(View v){
+        RadioButton bRadio;
+        switch(v.getId()){
+            case R.id.radio_preg_40:
+                bRadio = (RadioButton) findViewById(R.id.radio_preg_20);
+                bRadio.setChecked(false);
+                break;
+            case R.id.radio_preg_20:
+                bRadio = (RadioButton) findViewById(R.id.radio_preg_40);
+                bRadio.setChecked(false);
+                break;
+        }
+    }
+
+    public void comentar(View v){
+        RadioButton boton;
+
+        if (pathfichero==null){
+            Toast aviso = new Toast(getApplicationContext());
+            aviso.setDuration(Toast.LENGTH_LONG);
+            aviso.setText("Seleccione un fichero");
+            aviso.setView(layout);
+            aviso.show();
+        }
+        else{
+            datos_examen.putString("fichero",pathfichero);
+            boton = (RadioButton) findViewById(R.id.radio_preg_40);
+            if (boton.isChecked()){
+                datos_examen.putInt("peguntas",40);
+            }
+            else{
+                datos_examen.putInt(("preguntas",20));
+            }
+
         }
 
+        Intent examen = new Intent(this,ActivityExamen.class);
+        examen.putExtras(datos_examen);
+        startActivity(examen);
+
     }
+
 
     protected void onActivityResult(int requestcode, int resultcode, Intent data){
 
@@ -51,9 +102,20 @@ public class MainActivity extends Activity {
                     pathfichero = data.getData().getPath();
                     titfich = (TextView) findViewById(R.id.tit_pregunta);
                     titfich.setText(pathfichero);
-                }
+
+                    StringTokenizer token = new StringTokenizer(pathfichero,"/");
+                    String temp = null;
+                    while(token.hasMoreTokens()){
+                        temp=token.nextToken();
+                    }
+                    titfich.setText(temp);
+
+
+                                    }
             break;
         }
+
+
 
 
 

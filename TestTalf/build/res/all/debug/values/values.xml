@@ -15,8 +15,9 @@
     <string name="examen_20">20 preguntas</string>
     <string name="examen_40">40 preguntas</string>
     <string name="hello_world">Hello world!</string>
-    <string name="sel_file">Seleccion de preguntas</string>
+    <string name="sel_file">Cargar fichero de preguntas</string>
     <string name="texto_inicio_examen">Empezar examen</string>
+    <string name="titulo_inicial">Seleccione un fichero para comenzar el examen</string>
 
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

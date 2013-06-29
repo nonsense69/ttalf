@@ -24,15 +24,18 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@id/tit_pregunta"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:text="@string/titulo_inicial"/>
 
     <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/examen_20"
             android:id="@id/radio_preg_20"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_below="@id/b_selfile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:onClick="selNumPreg"/>
 
     <RadioButton
             android:layout_width="wrap_content"
@@ -42,7 +45,9 @@
             android:singleLine="false"
             android:layout_below="@id/radio_preg_20"
             android:layout_alignLeft="@id/radio_preg_20"
-            android:layout_marginTop="21dp"/>
+            android:layout_marginTop="21dp"
+            android:checked="true"
+            android:onClick="selNumPreg"/>
 
     <Button
             android:layout_width="wrap_content"

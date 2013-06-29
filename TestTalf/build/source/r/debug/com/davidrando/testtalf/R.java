@@ -39,6 +39,7 @@ public final class R {
         public static final int hello_world=0x7f060004;
         public static final int sel_file=0x7f060005;
         public static final int texto_inicio_examen=0x7f060006;
+        public static final int titulo_inicial=0x7f060007;
     }
     public static final class style {
         /** 
