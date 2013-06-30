@@ -22,8 +22,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Medium Text"
-                    android:id="@+id/textView"
+                    android:id="@id/examenTitulo"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_column="0"/>
@@ -38,10 +37,17 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:id="@id/textoPregunta"
-                    android:layout_below="@+id/textView"
-                    android:layout_alignLeft="@+id/textView"
+                    android:layout_below="@id/examenTitulo"
+                    android:layout_alignLeft="@id/examenTitulo"
                     android:layout_marginTop="20dp"
                     android:layout_column="0"/>
+
+        </TableRow>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:minHeight="50dp">
         </TableRow>
 
         <TableRow
@@ -62,7 +68,8 @@
                         android:layout_centerVertical="true"
                         android:layout_alignParentLeft="true"
                         android:layout_column="0"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:onClick="responder"/>
 
                 <Button
                         android:layout_width="0dp"
@@ -73,18 +80,14 @@
                         android:layout_alignParentRight="true"
                         android:textSize="60dp"
                         android:layout_column="0"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:onClick="responder"/>
             </LinearLayout>
         </TableRow>
 
         <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
-        </TableRow>
-
-        <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
 
         </TableRow>
 
@@ -98,6 +101,33 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
+        </TableRow>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+        </TableRow>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+        </TableRow>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+        </TableRow>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@id/puntuacion"
+                    android:layout_column="3"/>
         </TableRow>
     </TableLayout>
 

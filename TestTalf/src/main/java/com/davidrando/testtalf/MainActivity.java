@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
     private String pathfichero=null;
     private File fichero;
     private Bundle datos_examen;
+    private String titulo_examen;
 
     public TextView titfich;
 
@@ -82,6 +83,8 @@ public class MainActivity extends Activity {
             else{
                 datos_examen.putInt("preguntas",20);
             }
+            datos_examen.putString("tituloExamen",titulo_examen);
+
             Intent examen = new Intent(this,ActivityExamen.class);
             examen.putExtras(datos_examen);
             startActivity(examen);
@@ -106,6 +109,7 @@ public class MainActivity extends Activity {
                     while(token.hasMoreTokens()){
                         temp=token.nextToken();
                     }
+                    titulo_examen = temp;
                     titfich.setText(temp);
 
                 }

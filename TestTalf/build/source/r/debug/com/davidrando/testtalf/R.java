@@ -29,16 +29,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f060009;
+        public static final int action_settings=0x7f06000a;
         public static final int b_selfile=0x7f060000;
         public static final int boton_no=0x7f060001;
         public static final int boton_si=0x7f060002;
-        public static final int inicio_examen=0x7f060003;
-        public static final int radio_preg_20=0x7f060004;
-        public static final int radio_preg_40=0x7f060005;
-        public static final int textView=0x7f060008;
-        public static final int textoPregunta=0x7f060006;
-        public static final int tit_pregunta=0x7f060007;
+        public static final int examenTitulo=0x7f060003;
+        public static final int inicio_examen=0x7f060004;
+        public static final int puntuacion=0x7f060005;
+        public static final int radio_preg_20=0x7f060006;
+        public static final int radio_preg_40=0x7f060007;
+        public static final int textoPregunta=0x7f060008;
+        public static final int tit_pregunta=0x7f060009;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

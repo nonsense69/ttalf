@@ -14,7 +14,9 @@
     <item name="b_selfile" type="id"/>
     <item name="boton_no" type="id"/>
     <item name="boton_si" type="id"/>
+    <item name="examenTitulo" type="id"/>
     <item name="inicio_examen" type="id"/>
+    <item name="puntuacion" type="id"/>
     <item name="radio_preg_20" type="id"/>
     <item name="radio_preg_40" type="id"/>
     <item name="textoPregunta" type="id"/>
