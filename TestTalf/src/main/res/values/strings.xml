@@ -3,6 +3,14 @@
 
     <string name="app_name">Test Talf</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string><string name="sel_file">Cargar fichero de preguntas</string><string name="examen_20">20 preguntas</string><string name="examen_40">40 preguntas</string><string name="texto_inicio_examen">Empezar examen</string><string name="titulo_inicial">Sel. un fichero para comenzar el examen</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="sel_file">Cargar fichero de preguntas</string>
+    <string name="examen_20">20 preguntas</string>
+    <string name="examen_40">40 preguntas</string>
+    <string name="texto_inicio_examen">Empezar examen</string>
+    <string name="titulo_inicial">Sel. un fichero para comenzar el examen</string>
+    <string name="title_activity_activity_examen">Examen Test Talf</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string><string name="si">SI</string><string name="no">NO</string>
 
 </resources>

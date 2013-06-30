@@ -65,31 +65,29 @@ public class MainActivity extends Activity {
         }
     }
 
-    public void comentar(View v){
+
+    public void comenzar(View v){
         RadioButton boton;
 
         if (pathfichero==null){
-            Toast aviso = new Toast(getApplicationContext());
-            aviso.setDuration(Toast.LENGTH_LONG);
-            aviso.setText("Seleccione un fichero");
-            aviso.setView(layout);
-            aviso.show();
+            Toast.makeText(getApplicationContext(),"No has elegido fichero",Toast.LENGTH_SHORT).show();
         }
         else{
+            datos_examen=new Bundle();
             datos_examen.putString("fichero",pathfichero);
             boton = (RadioButton) findViewById(R.id.radio_preg_40);
             if (boton.isChecked()){
-                datos_examen.putInt("peguntas",40);
+                datos_examen.putInt("preguntas",40);
             }
             else{
-                datos_examen.putInt(("preguntas",20));
+                datos_examen.putInt("preguntas",20);
             }
+            Intent examen = new Intent(this,ActivityExamen.class);
+            examen.putExtras(datos_examen);
+            startActivity(examen);
 
         }
 
-        Intent examen = new Intent(this,ActivityExamen.class);
-        examen.putExtras(datos_examen);
-        startActivity(examen);
 
     }
 
@@ -110,16 +108,10 @@ public class MainActivity extends Activity {
                     }
                     titfich.setText(temp);
 
-
-                                    }
+                }
             break;
         }
 
-
-
-
-
     }
 
-    
 }
