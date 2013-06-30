@@ -1,0 +1,15 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1372083039000 408 843b3239929dc053db24bd44ec06073d08708770 /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/build/classes/release/com/davidrando/testtalf/R$id.class
+1372082866000 484258 bd6479f5dd592790607e0504e66e0f31c2b4d308 /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/libs/android-support-v4.jar
+1372083039000 476 c682428dec300935d92b0558e49edb690d5f3d60 /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/build/classes/release/com/davidrando/testtalf/R$dimen.class
+1372083039000 418 65352a883d36f40aba319c120426b0e96349c7cf /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/build/classes/release/com/davidrando/testtalf/R$layout.class
+1372083039000 727 0ec344a13443b1d1d20e64921fdc151b77977c49 /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/build/classes/release/com/davidrando/testtalf/R.class
+1372083039000 487 d67f1226da3633f0899a95330117090d3711e92a /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/build/classes/release/com/davidrando/testtalf/R$string.class
+1372083039000 827 cd139c8bbc65c68355111e9deeba37f6859d4d09 /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/build/classes/release/com/davidrando/testtalf/MainActivity.class
+1372083039000 355 dd4b28d855c42f27169bb526b191010c9e2cdf91 /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/build/classes/release/com/davidrando/testtalf/R$attr.class
+1372083039000 446 909a04a4ae47f25df1b857017704d62a9df1ce6e /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/build/classes/release/com/davidrando/testtalf/R$style.class
+1372083039000 422 b435bb1f8afef99c48b93f6b58559450834c76c7 /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/build/classes/release/com/davidrando/testtalf/R$drawable.class
+1372083039000 355 d9cfbd30d6f152b05fcf4cb398c49594bef1830d /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/build/classes/release/com/davidrando/testtalf/BuildConfig.class
+1372083039000 403 299829e5de629b92576ff27a21f38380698e21fe /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/build/classes/release/com/davidrando/testtalf/R$menu.class
