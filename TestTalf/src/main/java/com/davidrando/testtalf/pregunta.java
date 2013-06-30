@@ -20,8 +20,9 @@ public class pregunta {
         // Aqui le pasamos el texto y lo tokenizaremos
 
         StringTokenizer token = new StringTokenizer(textoP,"__");
-        respCorrecta = token.nextToken();
+        this.respCorrecta = token.nextToken();
         this.texto = token.nextToken();
+
     }
 
     public String getTexto(){
@@ -33,7 +34,7 @@ public class pregunta {
     }
 
     public boolean esCorrecta(String respuestaAlumno){
-        return respuestaAlumno==this.respCorrecta ;
+        return respuestaAlumno.equals(this.respCorrecta);
     }
 
 }

@@ -6,7 +6,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".ActivityExamen">
+    tools:context=".ActivityExamen"
+        >
 
     <TableLayout
             android:layout_width="fill_parent"
@@ -30,24 +31,19 @@
 
         <TableRow
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="fill_parent"
+                >
 
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:id="@id/textoPregunta"
                     android:layout_below="@id/examenTitulo"
                     android:layout_alignLeft="@id/examenTitulo"
                     android:layout_marginTop="20dp"
-                    android:layout_column="0"/>
-
-        </TableRow>
-
-        <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:minHeight="50dp">
+                    android:layout_column="0"
+                    />
         </TableRow>
 
         <TableRow
@@ -89,45 +85,48 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
-        </TableRow>
-
-        <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-
-        </TableRow>
-
-        <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-
-        </TableRow>
-
-        <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-        </TableRow>
-
-        <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-        </TableRow>
-
-        <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-        </TableRow>
-
-        <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@id/puntuacion"
-                    android:layout_column="3"/>
+                    android:text="@string/puntosText"
+                    android:id="@id/puntosLayout"
+                    android:layout_column="0"/>
+        </TableRow>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+        </TableRow>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+        </TableRow>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+        </TableRow>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@id/imagenRespuesta"
+                android:layout_column="1"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@id/pAnterior"
+                android:layout_column="0"/>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
         </TableRow>
     </TableLayout>
 

@@ -11,6 +11,10 @@
     <string name="titulo_inicial">Sel. un fichero para comenzar el examen</string>
     <string name="title_activity_activity_examen">Examen Test Talf</string>
     <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string><string name="si">SI</string><string name="no">NO</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="si">SI</string>
+    <string name="no">NO</string>
+    <string name="puntosText">Puntuacion: 0</string>
+    <string name="title_activity_activity_resultado">Resultado Test Talf</string><string name="titulo_resultado_test">Resultado del Test</string><string name="resul">Aprobado / Suspenso</string><string name="puntos_0">0</string><string name="puntos_mostrar">Puntuacion: 0</string>
 
 </resources>

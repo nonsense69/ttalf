@@ -1,11 +1,14 @@
 package com.davidrando.testtalf;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -13,6 +16,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 
 
 public class ActivityExamen extends Activity {
@@ -22,7 +26,7 @@ public class ActivityExamen extends Activity {
     private int numPreguntas;
     private double puntacionPorPregunta=0.25;
     private String nombreFichero;
-    private double puntosExamen;
+    private double puntosExamen = 0.0;
     private int preguntas;
     private Bundle paquete;
     private LinkedList<pregunta> listaPreguntas;
@@ -30,6 +34,7 @@ public class ActivityExamen extends Activity {
 
     private int puntuacion;
     private pregunta preguntaActual;
+    private int contador=1;
 
 
     // Aquí estamos abriendo el fichero ya
@@ -44,7 +49,7 @@ public class ActivityExamen extends Activity {
 
 
         TextView tExamen = (TextView) findViewById(R.id.examenTitulo);
-        tExamen.setText(paquete.getString("tituloExamen"));
+        tExamen.setText("Pregunta: "+String.valueOf(this.contador)+" - "+paquete.getString("tituloExamen"));
 
         listaPreguntas = new LinkedList<pregunta>();
         String linea = null;
@@ -62,8 +67,8 @@ public class ActivityExamen extends Activity {
             //Lo desordenamos un poco para que sea aleatorio
              Collections.shuffle(listaPreguntas);
             TextView pregunta = (TextView) findViewById(R.id.textoPregunta);
-            pregunta.setText(listaPreguntas.getFirst().getTexto());
             preguntaActual = listaPreguntas.getFirst();
+            pregunta.setText(preguntaActual.getTexto());
 
             fichero.close();;
         } catch (FileNotFoundException e) {
@@ -83,10 +88,12 @@ public class ActivityExamen extends Activity {
 
 
     public void sigPregunta(){
-        listaPreguntas.removeFirst();
-        preguntaActual = listaPreguntas.getFirst();
-        TextView preg = (TextView) findViewById(R.id.textoPregunta);
-        preg.setText(preguntaActual.getTexto());
+            this.listaPreguntas.removeFirst();
+            this.preguntaActual = this.listaPreguntas.getFirst();
+            TextView preg = (TextView) findViewById(R.id.textoPregunta);
+            preg.setText(preguntaActual.getTexto());
+
+
     }
 
 
@@ -104,17 +111,36 @@ public class ActivityExamen extends Activity {
                 break;
         }
 
+        ImageView imagen = (ImageView) findViewById(R.id.imagenRespuesta);
         if (preguntaActual.esCorrecta(respActual)){
             puntosExamen = puntosExamen + puntacionPorPregunta;
+            imagen.setImageResource(R.drawable.yao_si);
         }
         else{
             puntosExamen = puntosExamen - puntacionPorPregunta;
+            imagen.setImageResource(R.drawable.ffuu_no);
         }
 
-        TextView pTemp = (TextView) findViewById(R.id.puntuacion);
-        pTemp.setText("Puntuacion"+String.valueOf(puntosExamen));
+        TextView pTemp = (TextView) findViewById(R.id.puntosLayout);
+        pTemp.setText("Puntuacion: "+String.valueOf(puntosExamen));
 
-        this.sigPregunta();
+        TextView antPregunta = (TextView) findViewById(R.id.pAnterior);
+        antPregunta.setText("Pregunta anterior: "+this.preguntaActual.getTexto());
+
+        try{
+            this.sigPregunta();
+            this.contador++;
+            TextView tExamen = (TextView) findViewById(R.id.examenTitulo);
+            tExamen.setText("Pregunta: "+String.valueOf(this.contador)+" - "+paquete.getString("tituloExamen"));
+
+        }
+        catch(NoSuchElementException e){
+            // Vamos a cargar el otro layout para mostrar el resultado
+            Intent finalExamen = new Intent(this,ActivityResultado.class);
+            finalExamen.putExtra("puntuacion",this.puntosExamen);
+            startActivity(finalExamen);
+        }
+
     }
 
 }

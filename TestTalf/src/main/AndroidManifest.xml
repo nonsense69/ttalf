@@ -26,6 +26,10 @@
             android:name="com.davidrando.testtalf.ActivityExamen"
             android:label="@string/title_activity_activity_examen" >
         </activity>
+        <activity
+            android:name="com.davidrando.testtalf.ActivityResultado"
+            android:label="@string/title_activity_activity_resultado" >
+        </activity>
     </application>
 
 </manifest>

@@ -11,11 +11,16 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <item name="aprSus" type="id"/>
     <item name="b_selfile" type="id"/>
     <item name="boton_no" type="id"/>
     <item name="boton_si" type="id"/>
     <item name="examenTitulo" type="id"/>
+    <item name="imagenRespuesta" type="id"/>
     <item name="inicio_examen" type="id"/>
+    <item name="mostrarPuntos" type="id"/>
+    <item name="pAnterior" type="id"/>
+    <item name="puntosLayout" type="id"/>
     <item name="puntuacion" type="id"/>
     <item name="radio_preg_20" type="id"/>
     <item name="radio_preg_40" type="id"/>
@@ -30,11 +35,17 @@
     <string name="examen_40">40 preguntas</string>
     <string name="hello_world">Hello world!</string>
     <string name="no">NO</string>
+    <string name="puntosText">Puntuacion: 0</string>
+    <string name="puntos_0">0</string>
+    <string name="puntos_mostrar">Puntuacion: 0</string>
+    <string name="resul">Aprobado / Suspenso</string>
     <string name="sel_file">Cargar fichero de preguntas</string>
     <string name="si">SI</string>
     <string name="texto_inicio_examen">Empezar examen</string>
     <string name="title_activity_activity_examen">Examen Test Talf</string>
+    <string name="title_activity_activity_resultado">Resultado Test Talf</string>
     <string name="titulo_inicial">Sel. un fichero para comenzar el examen</string>
+    <string name="titulo_resultado_test">Resultado del Test</string>
 
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
