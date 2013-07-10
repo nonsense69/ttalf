@@ -14,6 +14,7 @@
     <item name="aprSus" type="id"/>
     <item name="b_selfile" type="id"/>
     <item name="boton_no" type="id"/>
+    <item name="boton_nocon" type="id"/>
     <item name="boton_si" type="id"/>
     <item name="examenTitulo" type="id"/>
     <item name="imagenRespuesta" type="id"/>
@@ -29,6 +30,8 @@
 
     <string name="action_settings">Settings</string>
     <string name="app_name">Test Talf</string>
+    <string name="bot_nc">NC</string>
+    <string name="boton_nc">NC</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="examen_20">20 preguntas</string>

@@ -114,7 +114,7 @@ public class ActivityExamen extends Activity {
                 break;
         }
 
-        if (respActual=="NC"){
+        if (respActual!="NC"){
             ImageView imagen = (ImageView) findViewById(R.id.imagenRespuesta);
             if (preguntaActual.esCorrecta(respActual)){
                 puntosExamen = puntosExamen + puntacionPorPregunta;
@@ -127,10 +127,10 @@ public class ActivityExamen extends Activity {
 
             TextView pTemp = (TextView) findViewById(R.id.puntosLayout);
             pTemp.setText("Puntuacion: "+String.valueOf(puntosExamen));
-
+        }
             TextView antPregunta = (TextView) findViewById(R.id.pAnterior);
             antPregunta.setText("Pregunta anterior: "+this.preguntaActual.getTexto());
-        }
+
         try{
             this.sigPregunta();
             this.contador++;
