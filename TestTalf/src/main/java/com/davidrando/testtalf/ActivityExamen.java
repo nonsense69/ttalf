@@ -109,24 +109,28 @@ public class ActivityExamen extends Activity {
             case R.id.boton_no:
                 respActual="F";
                 break;
+            case R.id.boton_nocon:
+                respActual="NC";
+                break;
         }
 
-        ImageView imagen = (ImageView) findViewById(R.id.imagenRespuesta);
-        if (preguntaActual.esCorrecta(respActual)){
-            puntosExamen = puntosExamen + puntacionPorPregunta;
-            imagen.setImageResource(R.drawable.yao_si);
+        if (respActual=="NC"){
+            ImageView imagen = (ImageView) findViewById(R.id.imagenRespuesta);
+            if (preguntaActual.esCorrecta(respActual)){
+                puntosExamen = puntosExamen + puntacionPorPregunta;
+                imagen.setImageResource(R.drawable.yao_si);
+            }
+            else{
+                puntosExamen = puntosExamen - puntacionPorPregunta;
+                imagen.setImageResource(R.drawable.ffuu_no);
+             }
+
+            TextView pTemp = (TextView) findViewById(R.id.puntosLayout);
+            pTemp.setText("Puntuacion: "+String.valueOf(puntosExamen));
+
+            TextView antPregunta = (TextView) findViewById(R.id.pAnterior);
+            antPregunta.setText("Pregunta anterior: "+this.preguntaActual.getTexto());
         }
-        else{
-            puntosExamen = puntosExamen - puntacionPorPregunta;
-            imagen.setImageResource(R.drawable.ffuu_no);
-        }
-
-        TextView pTemp = (TextView) findViewById(R.id.puntosLayout);
-        pTemp.setText("Puntuacion: "+String.valueOf(puntosExamen));
-
-        TextView antPregunta = (TextView) findViewById(R.id.pAnterior);
-        antPregunta.setText("Pregunta anterior: "+this.preguntaActual.getTexto());
-
         try{
             this.sigPregunta();
             this.contador++;
