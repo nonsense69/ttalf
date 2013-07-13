@@ -15,6 +15,6 @@
     <string name="si">SI</string>
     <string name="no">NO</string>
     <string name="puntosText">Puntuacion: 0</string>
-    <string name="title_activity_activity_resultado">Resultado Test Talf</string><string name="titulo_resultado_test">Resultado del Test</string><string name="resul">Aprobado / Suspenso</string><string name="puntos_0">0</string><string name="puntos_mostrar">Puntuacion: 0</string><string name="boton_nc">NC</string><string name="bot_nc">NC</string>
+    <string name="title_activity_activity_resultado">Resultado Test Talf</string><string name="titulo_resultado_test">Resultado del Test</string><string name="resul">Aprobado / Suspenso</string><string name="puntos_0">0</string><string name="puntos_mostrar">Puntuacion: 0</string><string name="boton_nc">NC</string><string name="bot_nc">NC</string><string name="textCreadoPor">Creado por David Rando</string><string name="textPreguntas30">30 preguntas</string>
 
 </resources>

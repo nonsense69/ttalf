@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/attrs.xml -->
+    <attr name="buttonBarButtonStyle" format="reference" />
+    <attr name="buttonBarStyle" format="reference" />
+    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/colors.xml -->
     <color name="black_overlay">#66000000</color>
-
-    <declare-styleable name="ButtonBarContainerTheme">
-        <attr name="buttonBarStyle" format="reference" />
-        <attr name="buttonBarButtonStyle" format="reference" />
-    </declare-styleable>
-
+    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/attrs.xml -->
+    <declare-styleable name="ButtonBarContainerTheme"></declare-styleable>
+    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/dimens.xml -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-
+    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/ids.xml -->
     <item name="aprSus" type="id"/>
     <item name="b_selfile" type="id"/>
     <item name="boton_no" type="id"/>
     <item name="boton_nocon" type="id"/>
     <item name="boton_si" type="id"/>
+    <item name="creadoPor" type="id"/>
     <item name="examenTitulo" type="id"/>
     <item name="imagenRespuesta" type="id"/>
     <item name="inicio_examen" type="id"/>
@@ -27,7 +29,7 @@
     <item name="radio_preg_40" type="id"/>
     <item name="textoPregunta" type="id"/>
     <item name="tit_pregunta" type="id"/>
-
+    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/strings.xml -->
     <string name="action_settings">Settings</string>
     <string name="app_name">Test Talf</string>
     <string name="bot_nc">NC</string>
@@ -44,12 +46,14 @@
     <string name="resul">Aprobado / Suspenso</string>
     <string name="sel_file">Cargar fichero de preguntas</string>
     <string name="si">SI</string>
+    <string name="textCreadoPor">Creado por David Rando</string>
+    <string name="textPreguntas30">30 preguntas</string>
     <string name="texto_inicio_examen">Empezar examen</string>
     <string name="title_activity_activity_examen">Examen Test Talf</string>
     <string name="title_activity_activity_resultado">Resultado Test Talf</string>
     <string name="titulo_inicial">Sel. un fichero para comenzar el examen</string>
     <string name="titulo_resultado_test">Resultado del Test</string>
-
+    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/styles.xml -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in

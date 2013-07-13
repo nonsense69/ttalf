@@ -24,6 +24,7 @@ public class MainActivity extends Activity {
     private File fichero;
     private Bundle datos_examen;
     private String titulo_examen;
+    private int numPreguntas=0;
 
     public TextView titfich;
 
@@ -58,17 +59,29 @@ public class MainActivity extends Activity {
             case R.id.radio_preg_40:
                 bRadio = (RadioButton) findViewById(R.id.radio_preg_20);
                 bRadio.setChecked(false);
+                bRadio = (RadioButton) findViewById(R.id.pregunta30);
+                bRadio.setChecked(false);
+                this.numPreguntas=40;
                 break;
             case R.id.radio_preg_20:
                 bRadio = (RadioButton) findViewById(R.id.radio_preg_40);
                 bRadio.setChecked(false);
+                bRadio = (RadioButton) findViewById(R.id.pregunta30);
+                bRadio.setChecked(false);
+                this.numPreguntas=20;
+                break;
+            case R.id.pregunta30:
+                bRadio = (RadioButton) findViewById(R.id.radio_preg_20);
+                bRadio.setChecked(false);
+                bRadio = (RadioButton) findViewById(R.id.radio_preg_40);
+                bRadio.setChecked(false);
+                this.numPreguntas=30;
                 break;
         }
     }
 
 
     public void comenzar(View v){
-        RadioButton boton;
 
         if (pathfichero==null){
             Toast.makeText(getApplicationContext(),"No has elegido fichero",Toast.LENGTH_SHORT).show();
@@ -76,13 +89,9 @@ public class MainActivity extends Activity {
         else{
             datos_examen=new Bundle();
             datos_examen.putString("fichero",pathfichero);
-            boton = (RadioButton) findViewById(R.id.radio_preg_40);
-            if (boton.isChecked()){
-                datos_examen.putInt("preguntas",40);
-            }
-            else{
-                datos_examen.putInt("preguntas",20);
-            }
+
+            datos_examen.putInt("preguntas",numPreguntas);
+
             datos_examen.putString("tituloExamen",titulo_examen);
 
             Intent examen = new Intent(this,ActivityExamen.class);

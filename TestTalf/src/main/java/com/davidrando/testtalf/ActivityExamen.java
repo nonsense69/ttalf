@@ -46,7 +46,14 @@ public class ActivityExamen extends Activity {
         paquete=this.getIntent().getExtras();
         nombreFichero=paquete.getString("fichero");
         preguntas = paquete.getInt("preguntas");
-
+        switch (preguntas){
+            case 20:
+                this.puntacionPorPregunta=0.5;
+                break;
+            case 30:
+                this.puntacionPorPregunta=0.33;
+                break;
+        }
 
         TextView tExamen = (TextView) findViewById(R.id.examenTitulo);
         tExamen.setText("Pregunta: "+String.valueOf(this.contador)+" - "+paquete.getString("tituloExamen"));

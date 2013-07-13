@@ -34,10 +34,10 @@
             android:layout_height="wrap_content"
             android:text="@string/examen_20"
             android:id="@id/radio_preg_20"
+            android:layout_marginTop="24dp"
+            android:onClick="selNumPreg"
             android:layout_below="@id/b_selfile"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
-            android:onClick="selNumPreg"/>
+            android:layout_alignLeft="@id/b_selfile"/>
 
     <RadioButton
             android:layout_width="wrap_content"
@@ -45,11 +45,10 @@
             android:text="@string/examen_40"
             android:id="@id/radio_preg_40"
             android:singleLine="false"
-            android:layout_below="@id/radio_preg_20"
-            android:layout_alignLeft="@id/radio_preg_20"
-            android:layout_marginTop="21dp"
             android:checked="true"
-            android:onClick="selNumPreg"/>
+            android:onClick="selNumPreg"
+            android:layout_below="@+id/pregunta30"
+            android:layout_alignLeft="@+id/pregunta30"/>
 
     <Button
             android:layout_width="wrap_content"
@@ -60,4 +59,23 @@
             android:layout_below="@id/radio_preg_40"
             android:layout_centerHorizontal="true"
             android:onClick="comenzar"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@id/creadoPor"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:singleLine="false"
+            android:text="@string/textCreadoPor"/>
+
+    <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pregunta30"
+            android:text="@string/textPreguntas30"
+            android:layout_below="@id/radio_preg_20"
+            android:layout_alignLeft="@id/radio_preg_20"/>
+
 </RelativeLayout>
