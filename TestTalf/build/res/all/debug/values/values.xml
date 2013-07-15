@@ -46,6 +46,7 @@
     <string name="resul">Aprobado / Suspenso</string>
     <string name="sel_file">Cargar fichero de preguntas</string>
     <string name="si">SI</string>
+    <string name="textAnterior">La pregunta anterior se mostrará aqui</string>
     <string name="textCreadoPor">Creado por David Rando</string>
     <string name="textPreguntas30">30 preguntas</string>
     <string name="texto_inicio_examen">Empezar examen</string>

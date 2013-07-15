@@ -76,7 +76,8 @@
             android:id="@+id/pregunta30"
             android:text="@string/textPreguntas30"
             android:layout_below="@id/radio_preg_20"
-            android:layout_alignLeft="@id/radio_preg_20"/>
+            android:layout_alignLeft="@id/radio_preg_20"
+            android:onClick="selNumPreg"/>
 
 </RelativeLayout>
 <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/layout/activity_main.xml -->

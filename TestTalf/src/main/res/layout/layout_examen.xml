@@ -36,9 +36,10 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:id="@id/pAnterior"
             android:layout_column="0"
-            android:text="anteiror"
             android:layout_below="@id/imagenRespuesta"
-            android:layout_alignLeft="@+id/linearLayout"/>
+            android:layout_alignLeft="@+id/linearLayout"
+            android:phoneNumber="false"
+            android:text="@string/textAnterior"/>
 
     <TextView
             android:layout_width="wrap_content"
