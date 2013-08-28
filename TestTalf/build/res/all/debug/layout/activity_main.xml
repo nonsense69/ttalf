@@ -13,10 +13,65 @@
             android:layout_height="wrap_content"
             android:text="@string/sel_file"
             android:id="@id/b_selfile"
-            android:layout_marginTop="73dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:onClick="sel_fichero"/>
+        android:onClick="sel_fichero"
+        android:layout_below="@id/tit_pregunta"
+        android:layout_centerHorizontal="true" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/alert_light_frame"
+        android:id="@+id/frameLayout"
+        android:layout_below="@id/b_selfile"
+        android:layout_alignLeft="@id/b_selfile"
+        android:layout_alignRight="@id/b_selfile">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal|top">
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/examen_20"
+                    android:id="@id/radio_preg_20"
+                android:onClick="selNumPreg"
+                    android:layout_below="@id/b_selfile"
+                    android:layout_alignLeft="@id/b_selfile"/>
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pregunta30"
+                    android:text="@string/textPreguntas30"
+                    android:layout_below="@id/radio_preg_20"
+                    android:layout_alignLeft="@id/radio_preg_20"
+                    android:onClick="selNumPreg"/>
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/examen_40"
+                    android:id="@id/radio_preg_40"
+                    android:singleLine="false"
+                    android:checked="true"
+                    android:onClick="selNumPreg"
+                    android:layout_below="@+id/pregunta30"
+                    android:layout_alignLeft="@+id/pregunta30"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_examen"
+                android:id="@id/id_radio_examen"
+                android:checked="false"
+                android:layout_below="@id/radio_preg_40"
+                android:layout_alignParentLeft="true"
+                android:onClick="selNumPreg" />
+        </RelativeLayout>
+
+    </FrameLayout>
 
     <TextView
             android:layout_width="match_parent"
@@ -27,38 +82,17 @@
             android:layout_gravity="center"
             android:textAlignment="center"
             android:layout_alignParentTop="true"
-            android:layout_alignLeft="@id/b_selfile"/>
-
-    <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/examen_20"
-            android:id="@id/radio_preg_20"
-            android:layout_marginTop="24dp"
-            android:onClick="selNumPreg"
-            android:layout_below="@id/b_selfile"
-            android:layout_alignLeft="@id/b_selfile"/>
-
-    <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/examen_40"
-            android:id="@id/radio_preg_40"
-            android:singleLine="false"
-            android:checked="true"
-            android:onClick="selNumPreg"
-            android:layout_below="@+id/pregunta30"
-            android:layout_alignLeft="@+id/pregunta30"/>
+            android:layout_alignLeft="@id/b_selfile"
+        android:textSize="18dp" />
 
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/texto_inicio_examen"
             android:id="@id/inicio_examen"
-            android:layout_marginTop="30dp"
-            android:layout_below="@id/radio_preg_40"
-            android:layout_centerHorizontal="true"
-            android:onClick="comenzar"/>
+        android:onClick="comenzar"
+        android:layout_below="@id/id_toggle_nota_final"
+        android:layout_centerHorizontal="true" />
 
     <TextView
             android:layout_width="wrap_content"
@@ -68,16 +102,28 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:singleLine="false"
-            android:text="@string/textCreadoPor"/>
+            android:text="@string/textCreadoPor"
+        android:textSize="10dp" />
 
-    <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/pregunta30"
-            android:text="@string/textPreguntas30"
-            android:layout_below="@id/radio_preg_20"
-            android:layout_alignLeft="@id/radio_preg_20"
-            android:onClick="selNumPreg"/>
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_mostrar_puntuacion"
+        android:id="@id/id_toggle_nota_final"
+        android:checked="false"
+        android:layout_below="@+id/frameLayout"
+        android:layout_alignRight="@id/inicio_examen"
+        android:onClick="notaFinal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/txt_mostrar_puntuacion"
+        android:id="@+id/textView"
+        android:layout_alignBaseline="@id/id_toggle_nota_final"
+        android:layout_alignBottom="@id/id_toggle_nota_final"
+        android:layout_toLeftOf="@id/id_toggle_nota_final" />
 
 </RelativeLayout>
-<!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/layout/activity_main.xml -->
+<!-- From: file:/home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/layout/activity_main.xml -->

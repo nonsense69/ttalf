@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/attrs.xml -->
-    <attr name="buttonBarButtonStyle" format="reference" />
-    <attr name="buttonBarStyle" format="reference" />
-    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/colors.xml -->
     <color name="black_overlay">#66000000</color>
-    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/attrs.xml -->
-    <declare-styleable name="ButtonBarContainerTheme"></declare-styleable>
-    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/dimens.xml -->
+    <!-- From: file:/home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/attrs.xml -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="buttonBarStyle" format="reference" />
+        <attr name="buttonBarButtonStyle" format="reference" />
+    </declare-styleable>
+    <!-- From: file:/home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/dimens.xml -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/ids.xml -->
+    <!-- From: file:/home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/ids.xml -->
     <item name="aprSus" type="id"/>
     <item name="b_selfile" type="id"/>
     <item name="boton_no" type="id"/>
@@ -19,6 +19,8 @@
     <item name="boton_si" type="id"/>
     <item name="creadoPor" type="id"/>
     <item name="examenTitulo" type="id"/>
+    <item name="id_radio_examen" type="id"/>
+    <item name="id_toggle_nota_final" type="id"/>
     <item name="imagenRespuesta" type="id"/>
     <item name="inicio_examen" type="id"/>
     <item name="mostrarPuntos" type="id"/>
@@ -29,7 +31,7 @@
     <item name="radio_preg_40" type="id"/>
     <item name="textoPregunta" type="id"/>
     <item name="tit_pregunta" type="id"/>
-    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/strings.xml -->
     <string name="action_settings">Settings</string>
     <string name="app_name">Test Talf</string>
     <string name="bot_nc">NC</string>
@@ -54,7 +56,9 @@
     <string name="title_activity_activity_resultado">Resultado Test Talf</string>
     <string name="titulo_inicial">Sel. un fichero para comenzar el examen</string>
     <string name="titulo_resultado_test">Resultado del Test</string>
-    <!-- From: /home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/styles.xml -->
+    <string name="txt_examen">Simulador Examen</string>
+    <string name="txt_mostrar_puntuacion">Nota solo al final</string>
+    <!-- From: file:/home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/styles.xml -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in

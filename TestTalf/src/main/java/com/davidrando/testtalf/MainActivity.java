@@ -1,17 +1,16 @@
 package com.davidrando.testtalf;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.StringTokenizer;
+import android.widget.ToggleButton;
 
 import java.io.File;
 import java.util.StringTokenizer;
@@ -25,6 +24,8 @@ public class MainActivity extends Activity {
     private Bundle datos_examen;
     private String titulo_examen;
     private int numPreguntas=0;
+    private boolean hacerExamen=false;
+    private boolean notaAlFinal=false;
 
     public TextView titfich;
 
@@ -53,6 +54,10 @@ public class MainActivity extends Activity {
         }
     }
 
+    public void notaFinal(View v){
+        this.notaAlFinal = ((ToggleButton) v).isChecked();
+    }
+
     public void selNumPreg(View v){
         RadioButton bRadio;
         switch(v.getId()){
@@ -61,21 +66,40 @@ public class MainActivity extends Activity {
                 bRadio.setChecked(false);
                 bRadio = (RadioButton) findViewById(R.id.pregunta30);
                 bRadio.setChecked(false);
+                bRadio = (RadioButton) findViewById(R.id.id_radio_examen);
+                bRadio.setChecked(false);
                 this.numPreguntas=40;
+                this.hacerExamen=false;
                 break;
             case R.id.radio_preg_20:
                 bRadio = (RadioButton) findViewById(R.id.radio_preg_40);
                 bRadio.setChecked(false);
                 bRadio = (RadioButton) findViewById(R.id.pregunta30);
                 bRadio.setChecked(false);
+                bRadio = (RadioButton) findViewById(R.id.id_radio_examen);
+                bRadio.setChecked(false);
                 this.numPreguntas=20;
+                this.hacerExamen=false;
                 break;
             case R.id.pregunta30:
                 bRadio = (RadioButton) findViewById(R.id.radio_preg_20);
                 bRadio.setChecked(false);
                 bRadio = (RadioButton) findViewById(R.id.radio_preg_40);
                 bRadio.setChecked(false);
+                bRadio = (RadioButton) findViewById(R.id.id_radio_examen);
+                bRadio.setChecked(false);
                 this.numPreguntas=30;
+                this.hacerExamen=false;
+                break;
+            case R.id.id_radio_examen:
+                bRadio = (RadioButton) findViewById(R.id.radio_preg_20);
+                bRadio.setChecked(false);
+                bRadio = (RadioButton) findViewById(R.id.radio_preg_40);
+                bRadio.setChecked(false);
+                bRadio = (RadioButton) findViewById(R.id.pregunta30);
+                bRadio.setChecked(false);
+                this.numPreguntas=40;
+                this.hacerExamen=true;
                 break;
         }
     }
@@ -90,6 +114,10 @@ public class MainActivity extends Activity {
             datos_examen=new Bundle();
             datos_examen.putString("fichero",pathfichero);
 
+            datos_examen.putBoolean("hacerExamen",this.hacerExamen);
+
+            datos_examen.putBoolean("notaFinal",this.notaAlFinal);
+
             datos_examen.putInt("preguntas",numPreguntas);
 
             datos_examen.putString("tituloExamen",titulo_examen);
@@ -99,7 +127,6 @@ public class MainActivity extends Activity {
             startActivity(examen);
 
         }
-
 
     }
 
