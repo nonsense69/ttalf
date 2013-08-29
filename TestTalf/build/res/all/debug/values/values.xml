@@ -19,7 +19,9 @@
     <item name="boton_si" type="id"/>
     <item name="creadoPor" type="id"/>
     <item name="examenTitulo" type="id"/>
+    <item name="idListaFalladas" type="id"/>
     <item name="id_radio_examen" type="id"/>
+    <item name="id_texto_falladas" type="id"/>
     <item name="id_toggle_nota_final" type="id"/>
     <item name="imagenRespuesta" type="id"/>
     <item name="inicio_examen" type="id"/>
@@ -29,6 +31,7 @@
     <item name="puntuacion" type="id"/>
     <item name="radio_preg_20" type="id"/>
     <item name="radio_preg_40" type="id"/>
+    <item name="textoFalladas" type="id">Preguntas Erroneas</item>
     <item name="textoPregunta" type="id"/>
     <item name="tit_pregunta" type="id"/>
     <!-- From: file:/home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/strings.xml -->
@@ -42,20 +45,21 @@
     <string name="examen_40">40 preguntas</string>
     <string name="hello_world">Hello world!</string>
     <string name="no">NO</string>
-    <string name="puntosText">Puntuacion: 0</string>
+    <string name="puntosText">10</string>
     <string name="puntos_0">0</string>
-    <string name="puntos_mostrar">Puntuacion: 0</string>
+    <string name="puntos_mostrar">10</string>
     <string name="resul">Aprobado / Suspenso</string>
     <string name="sel_file">Cargar fichero de preguntas</string>
     <string name="si">SI</string>
     <string name="textAnterior">La pregunta anterior se mostrará aqui</string>
     <string name="textCreadoPor">Creado por David Rando</string>
     <string name="textPreguntas30">30 preguntas</string>
+    <string name="textoFalladas">Preguntas Erroneas</string>
     <string name="texto_inicio_examen">Empezar examen</string>
     <string name="title_activity_activity_examen">Examen Test Talf</string>
     <string name="title_activity_activity_resultado">Resultado Test Talf</string>
     <string name="titulo_inicial">Sel. un fichero para comenzar el examen</string>
-    <string name="titulo_resultado_test">Resultado del Test</string>
+    <string name="titulo_resultado_test">Resultado:</string>
     <string name="txt_examen">Simulador Examen</string>
     <string name="txt_mostrar_puntuacion">Nota solo al final</string>
     <!-- From: file:/home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/styles.xml -->

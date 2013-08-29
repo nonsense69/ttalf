@@ -15,20 +15,19 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/titulo_resultado_test"
             android:id="@+id/textView"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="26dp"
-            android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@id/aprSus" />
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@id/mostrarPuntos"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="34dp"
-            android:text="@string/puntos_mostrar"/>
+        android:text="@string/puntos_mostrar"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_marginLeft="22dp" />
 
     <TextView
             android:layout_width="wrap_content"
@@ -36,7 +35,6 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@id/aprSus"
             android:text="@string/resul"
-        android:layout_marginTop="21dp"
         android:layout_below="@id/mostrarPuntos"
         android:layout_centerHorizontal="true" />
 
@@ -45,20 +43,18 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/textoFalladas"
+        android:id="@id/id_texto_falladas"
         android:layout_below="@id/aprSus"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:id="@id/id_texto_falladas" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="listado preguntas"
+        android:text=" "
         android:id="@id/idListaFalladas"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
         android:layout_below="@id/id_texto_falladas"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_marginTop="21dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

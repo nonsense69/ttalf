@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
+import java.util.StringTokenizer;
 
 
 public class ActivityExamen extends Activity {
@@ -150,7 +151,12 @@ public class ActivityExamen extends Activity {
             else{
                 puntosExamen = puntosExamen - puntacionPorPregunta;
                 imagen.setImageResource(R.drawable.ffuu_no);
-                listaFalladas.add(preguntaActual.getTexto());
+
+                StringTokenizer tokenNumero = new StringTokenizer(
+                        ((TextView) findViewById(R.id.textoPregunta)).getText().toString(),":"
+                );
+
+                listaFalladas.add(tokenNumero.nextToken());
 
              }
 
@@ -192,6 +198,7 @@ public class ActivityExamen extends Activity {
 
                 Intent finalExamen = new Intent(this,ActivityResultado.class);
                 finalExamen.putExtra("puntuacion",this.puntosExamen);
+                finalExamen.putExtra("fallos",listaFalladas);
                 startActivity(finalExamen);
             }
         }

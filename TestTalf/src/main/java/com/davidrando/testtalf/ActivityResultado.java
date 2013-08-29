@@ -1,11 +1,17 @@
 package com.davidrando.testtalf;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class ActivityResultado extends Activity {
+
+    private ArrayList<String> listaFalladas;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +20,9 @@ public class ActivityResultado extends Activity {
 
         TextView ponerPuntos = (TextView) findViewById(R.id.mostrarPuntos);
         double puntos = this.getIntent().getDoubleExtra("puntuacion",0.0);
+        listaFalladas = (ArrayList<String>) this.getIntent().getSerializableExtra("fallos");
+
+
         ponerPuntos.setText(String.valueOf(puntos));
 
         ponerPuntos = (TextView) findViewById(R.id.aprSus);
@@ -23,6 +32,11 @@ public class ActivityResultado extends Activity {
         else{
             ponerPuntos.setText("SUSPENSO");
         }
+
+        for (int i=0;i<listaFalladas.size();i++){
+            ((TextView) findViewById(R.id.idListaFalladas)).append(listaFalladas.get(i)+"\n");
+        }
+
     }
 
 
