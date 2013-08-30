@@ -12,6 +12,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <!-- From: file:/home/david/AndroidStudioProjects/TestTalfProject/TestTalf/src/main/res/values/ids.xml -->
+    <item name="ahoraNoContestadas" type="id"/>
     <item name="aprSus" type="id"/>
     <item name="b_selfile" type="id"/>
     <item name="boton_no" type="id"/>
@@ -54,6 +55,7 @@
     <string name="textAnterior">La pregunta anterior se mostrará aqui</string>
     <string name="textCreadoPor">Creado por David Rando</string>
     <string name="textPreguntas30">30 preguntas</string>
+    <string name="textoAhoraNoContest">NC pendientes</string>
     <string name="textoFalladas">Preguntas Erroneas</string>
     <string name="texto_inicio_examen">Empezar examen</string>
     <string name="title_activity_activity_examen">Examen Test Talf</string>

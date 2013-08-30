@@ -146,7 +146,7 @@ public class ActivityExamen extends Activity {
             ImageView imagen = (ImageView) findViewById(R.id.imagenRespuesta);
             if (preguntaActual.esCorrecta(respActual)){
                 puntosExamen = puntosExamen + puntacionPorPregunta;
-                imagen.setImageResource(R.drawable.yao_si);
+                imagen.setImageResource(R.drawable.thumbs_up);
             }
             else{
                 puntosExamen = puntosExamen - puntacionPorPregunta;
@@ -190,7 +190,8 @@ public class ActivityExamen extends Activity {
 
                 this.segundaVuelta=true;
                 this.listaNoContestadas=new LinkedList<pregunta>();
-                ((TextView) findViewById(R.id.puntosLayout)).setText("Preguntas no contestadas");
+                //((TextView) findViewById(R.id.puntosLayout)).setText("Preguntas no contestadas");
+                ((TextView) findViewById(R.id.ahoraNoContestadas)).setVisibility(View.VISIBLE);
 
 
             }

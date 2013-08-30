@@ -107,4 +107,14 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/textoAhoraNoContest"
+        android:id="@id/ahoraNoContestadas"
+        android:layout_alignTop="@id/puntosLayout"
+        android:layout_alignLeft="@id/pAnterior"
+        android:visibility="invisible" />
+
 </RelativeLayout>
